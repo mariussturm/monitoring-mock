@@ -1,0 +1,17 @@
+---
+/green:
+  type: datacenter
+/green/web1:
+  type: host
+/green/web1/http:
+  type: service
+/green/mail1:
+  type: host
+/green/mail1/smtp:
+  type: service
+/blue:
+  type: datacenter
+/blue/web2:
+  type: host
+/blue/web2/smtp:
+  type: service
