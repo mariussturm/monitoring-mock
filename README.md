@@ -7,7 +7,6 @@ A simulated outage affect all systems below the broken one.
 
 ## Installation
 
-### Ubuntu/Debian based
     gem install sinatra
     git clone https://github.com/mariussturm/monitoring-mock.git
 
