@@ -7,8 +7,9 @@ A simulated outage affect all systems below the broken one.
 
 ## Installation
 
-    $ gem install sinatra
     $ git clone https://github.com/mariussturm/monitoring-mock.git
+    $ cd monitoring-mock
+    $ bundle install
 
 ## Configuration
 Configure your nework.
@@ -39,7 +40,6 @@ Define a `type` for every entry.
 
 ## Start the mock
 
-    $ cd monitoring-mock
     $ ruby mm.rb
 
 Or use your rack server of choice
