@@ -7,13 +7,13 @@ A simulated outage affect all systems below the broken one.
 
 ## Installation
 
-    gem install sinatra
-    git clone https://github.com/mariussturm/monitoring-mock.git
+    $ gem install sinatra
+    $ git clone https://github.com/mariussturm/monitoring-mock.git
 
 ## Configuration
 Configure your nework.
 
-    vi etc/mock.yaml
+    $ vi etc/mock.yaml
 
 Define a `type` for every entry.
 
@@ -39,12 +39,12 @@ Define a `type` for every entry.
 
 ## Start the mock
 
-    cd monitoring-mock
-    ./mm.rb
+    $ cd monitoring-mock
+    $ ruby mm.rb
 
 Or use your rack server of choice
 
-    thin start
+    $ ruby mm.rb -s thin
 
 ## Dashboard
 You can get an overview of your simulated network under
@@ -57,9 +57,9 @@ Press the `Ok` or `Critical` button to toggle the state of an entry
 Every mock entry can be checked via HTTP. The mock delivers a JSON string
 as result.
 
-    curl http://localhost:4567/green
+    $ curl http://localhost:4567/green
     {"status":0,"output":"Service OK","options":{"type":"datacenter"}}
 
-    curl http://localhost:4567/green/web1
+    $ curl http://localhost:4567/green/web1
     {"status":2,"output":"Service is broken","options":{"type":"host"}}
 
